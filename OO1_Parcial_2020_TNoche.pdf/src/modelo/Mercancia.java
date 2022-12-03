@@ -22,7 +22,7 @@ public abstract class Mercancia {
 	public String toString() {
 		return "Mercancia [codMercancia=" + codMercancia + "]";
 	}
-	//***************
+	//****************
 	
 	public boolean esValido(String codMercancia) {
 		return codMercancia.length()==7;
