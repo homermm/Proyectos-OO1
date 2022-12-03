@@ -1,7 +1,7 @@
 package modelo;
 
 public abstract class Mercancia {
-	private String codMercancia;
+	protected String codMercancia;
 
 	public Mercancia(String codMercancia) throws Exception {
 		super();
