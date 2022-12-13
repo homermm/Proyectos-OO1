@@ -1,0 +1,88 @@
+Estimado Homero: 
+
+
+Te detallamos corrección del examen:
+
+
+1) + agregarCliente(long numeroCliente, String nombre, String apellido, int dni, int kWSubsidio) : boolean 
+
+El id se calcula de forma autoincremental, teniendo en cuenta que la lista puede tener altas y bajas de objetos.
+
+Bien.
+
+
+2) + agregarCliente(long numeroCliente, long cuit, String razonSocial) : boolean
+
+El id se calcula de forma autoincremental, teniendo en cuenta que la lista puede tener altas y bajas de objetos.
+
+Bien.
+
+
+3) + agregarTarifa(int consumoDesde, int consumoHasta, float cargoFijo, float cargoVariable) : boolean
+
+El id se calcula de forma autoincremental, teniendo en cuenta que la lista puede tener altas y bajas de objetos.
+
+Bien.
+
+
+4) + traerCliente(long numeroCliente) : Cliente
+
+Bien.
+
+
+5) + agregarLectura(LocalDate fecha, Cliente cliente, int estadoMedidor) : boolean
+
+El id se calcula de forma autoincremental, teniendo en cuenta que la lista puede tener altas y bajas de objetos.
+
+Bien.
+
+
+6) + traerLectura(int mes, int anio, Cliente cliente) : Lectura 
+
+Equals de objeto Cliente es true si numeroCliente son iguales
+
+Regular. Falta re implementar el equals en cliente para que comparar por el numeroCliente.
+
+
+7) + calcularConsumo(Lectura lecturaAnterior) : int 
+
+Retorna el consumo, diferencia entre estadoMedidor de las dos lecturas
+
+Bien.
+
+
+8) + traerTarifa(int consumo) : Tarifa
+
+Retorna objeto Tarifa, que cumpla  ((consumoDesde <= consumo) y (consumo <= int consumoHasta))
+
+Bien.
+
+
+9) + calcularTotalACobrar(int mes, int anio, Cliente cliente) : float
+
+1° Recupera el objeto Lectura según parámetros (int mes, int anio, Cliente cliente) 
+
+2° Recupera el objeto Lectura del mes anterior (1°). //utilizar minusMonths(1)
+
+3° Calcular el consumo del cliente entre las lecturas
+
+4° Determinar la tarifa según el consumo.
+
+5° totalVariable = cargoVariable * consumo
+
+6° Si el cliente es ClienteResidencial en el caso de tener subsidio aplica descuento=cargoVariable*kWhSubsidio 
+
+Si totalVariable >= descuento entonces totalVariable=totalVariable - descuento en caso contrario totalVariable=0.
+
+7° Retorna la suma cargoFijo + totalVariable  
+
+Bien.
+
+
+Saludo cordial, 
+
+Cátedra OO
+
+Examen: 9 (nueve)
+
+Acta de Examen Nro.: 8610-94
